@@ -14,7 +14,7 @@
                     </select>
                 <div class='ui-field-contain'>
                     <label for='idfilm'>Date de Sortie</label>
-                    <input type='hidden' name='idfilm' id='idfilm' value='<?php echo $_SESSION['film']->getId();?>' />
+                    <input type='hidden' name='idfilm' id='idfilm' value='<?php echo $_SESSION['film'];?>' />
                 </div>
             <button type="submit" value="Save"  >Sauvegarder l'acteur</button>
         </form>

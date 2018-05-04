@@ -11,7 +11,7 @@
                        echo $oneActeur->getPrenomActeur();
                  ?>
                  <?php $ii = PAsserelle::getOneFilm($info->getIdFilm());
-                 $_SESSION['film']=$ii; 
+              
                  ?>
         </div>
         <?php                $id2=($oneActeur->getId2())?>
@@ -20,3 +20,4 @@
              
     <?php }?>
     </ul>
+   <?php var_dump($_SESSION['film']=$film->getId()); ?>

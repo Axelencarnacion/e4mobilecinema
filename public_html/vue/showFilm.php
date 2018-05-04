@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <div>
 <a data-rel="dialog" data-transition="pop" href="index.php?action=addnew">Ajout d'un Film</a><br/><br/>
 
@@ -23,6 +24,9 @@
                 <label for='nation'>Nation: </label>
                 <?php echo $info->getNation(); ?>
             </div>
+             <?php $_SESSION['film']=$info->getId();?>
+             
+<?php var_dump($_SESSION)['film'] ?>
              <a class="modPrescL" data-rel="dialog" data-transition="pop"  href="index.php?action=details1&id=
              <?php echo $info->getId();?>">Modifier le film "  <?php echo $info->getNomFilm(); ?>" </a>
              <br>
