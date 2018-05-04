@@ -178,7 +178,7 @@ class Passerelle{
             $result = Passerelle::$mysql_link->exec($sql);  
         }
         static function deleteActeurFilm($idact){
-            $sql="DELETE FROM `acteurfilm` WHERE id_act=".$idact;           
+            $sql="DELETE FROM `acteurfilm` WHERE id_actfilm=".$idact;           
             $result = Passerelle::$mysql_link->exec($sql);  
         }
 }

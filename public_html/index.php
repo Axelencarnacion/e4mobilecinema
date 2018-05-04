@@ -107,7 +107,7 @@ require('vue/header.php');
                                     $contacts = Passerelle::getLesActeurs();
                                     require('vue/showActeur.php');
                                     break;
-            case 'delete'	:   $$id = $_REQUEST['id'];
+            case 'delete'	:   $id = $_REQUEST['id'];
                                     Passerelle::deleteFilm($id); 
                                     $contacts = Passerelle::getFilm();
                                     require('vue/showFilm.php');

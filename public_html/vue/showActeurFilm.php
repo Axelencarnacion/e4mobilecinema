@@ -14,10 +14,13 @@
               
                  ?>
         </div>
-        <?php                $id2=($oneActeur->getId2())?>
+        <?php               $id2=$info->getId3();
+        $id2=$id2+0;
+        ?>
            <?php  echo "<a rel=\"external\" href=\"javascript:deleteEntry3($id2)\">Supprimer cette saisie</a>";
            ?>
              
     <?php }?>
     </ul>
    <?php var_dump($_SESSION['film']=$film->getId()); ?>
+<?php       var_dump($id2)?>
