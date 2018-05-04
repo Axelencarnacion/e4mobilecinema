@@ -162,8 +162,9 @@ class Passerelle{
             
             $result = Passerelle::$mysql_link->exec($sql);  
         }
-        static function updateActeur($id2,$nomFilm,$dateSortie,$genre,$nation){
-            $sql="UPDATE `acteur` SET  `film_nom`='".$nomFilm."', `film_dateSortie` ='$dateSortie',film_genre   ='$genre',film_nation ='$nation'  WHERE film_id=".$id;
+        static function updateActeur($id2,$nomActeur, $prenomActeur, $nationalite, $naissance,$age){
+            $sql="UPDATE `acteur` SET  `acteur_nom`='".$nomActeur."', `acteur_prenom` ='$prenomActeur',acteur_nation='$nationalite'"
+                    . ",acteur_datenaiss ='$naissance',acteur_age='$age'  WHERE acteur_id=".$id2;
             
             $result = Passerelle::$mysql_link->exec($sql);  
         }
