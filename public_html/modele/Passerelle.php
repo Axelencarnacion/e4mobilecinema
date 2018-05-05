@@ -101,13 +101,15 @@ class Passerelle{
                     $sql ="SELECT * FROM acteurfilm WHERE film_id= ".$id;
                     
                     $result = Passerelle::$mysql_link->query($sql);
-                    var_dump($sql);
+//                    var_dump($result);
+                    if ($result->rowCount() > 0) {
+  
                     while ($row = $result->fetch()) { 
                         
                             $id = $row['id_actfilm'];
                             $idfilm = $row['film_id'];
                             $idact = $row['id_act'];
-                            var_dump($idact);
+//                            var_dump($idact);
                             $acteurfilm = new ActeurFilm($id,$idfilm,$idact);	
                             $acteursfilm[] = $acteurfilm;	
                     }
@@ -115,6 +117,10 @@ class Passerelle{
             return $acteursfilm;
         
         }
+        else{
+            echo '<script>alert("aucun acteur");</script>';
+        }
+}
         static function getLesActeursFilm2($id3){
             
             $acteurfilm = array();

@@ -1,4 +1,8 @@
 <?php session_start(); ?>
+<?php
+// Tout début du code PHP. Situé en haut de la page web
+ini_set("display_errors",0);error_reporting(0);
+?>
 <h1>Liste des acteurs</h1>
 <a data-rel="dialog" data-transition="pop" href="index.php?action=addnew3">Ajout d'un Acteur</a><br/><br/>
     <ul data-role="listview" class="ui-listview-outer"> 
@@ -9,9 +13,6 @@
                        echo $oneActeur->getNomActeur();
                        echo ' ';
                        echo $oneActeur->getPrenomActeur();
-                 ?>
-                 <?php $ii = PAsserelle::getOneFilm($info->getIdFilm());
-              
                  ?>
         </div>
         <?php               $id2=$info->getId3();
